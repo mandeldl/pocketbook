@@ -9,8 +9,23 @@
   <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/projects/bootstrap.min.css">
 </head>
 <body>
+	<div class="header">
+	  <div class="container">
+	  	<%= link_to (image_tag("http://s3.amazonaws.com/codecademy-content/projects/pocketbook/logo.svg")), '/' %>
+		<!-- <img src="http://s3.amazonaws.com/codecademy-content/projects/pocketbook/logo.svg" width="50"> -->
+	  </div>
+	</div>
 
 <%= yield %>
 
+	<div class="footer">
+	  <div class="container">
+	    <ul>
+	      <li><%= link_to "Contact", 'contact' %></li>
+	      <li><%= link_to "Help Center", 'help' %></li>
+	      <li><%= link_to "About", 'about' %></li>
+	    </ul>
+	  </div>
+	</div>
 </body>
 </html>
