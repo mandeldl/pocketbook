@@ -12,6 +12,17 @@ Rails.application.routes.draw do
   get '/help' => 'pages#help'
   get '/about' => 'pages#about'
 
+  #In the routes file, first map the GET request for the URL /login to the new action in the Sessions controller. 
+  #We'll use the first route to handle GET requests and display the login page
+  get '/login' => 'sessions#new'
+
+  #Then map the POST request for the URL /login to the create action in the Sessions controller. 
+  #We'll use this route to handle POST requests to check whether the 
+  #submitted username and password match the ones in the database.
+
+  post '/login' => 'sessions#create'
+
+
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
